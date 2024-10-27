@@ -16,6 +16,8 @@ public class T3_sumOfThree {
 
         int sum = (first + second + third);
         int product = (first * second * third);
+        // average isn't generally calculated correctly unless it is declared as a float
+        // because an integer variable can't store a result that isn't an equal number
         float avg = (float) (first + second + third) / 3;
 
         String result = String.format("Sum: %s || Product: %s || Average: %s", sum, product, avg);
