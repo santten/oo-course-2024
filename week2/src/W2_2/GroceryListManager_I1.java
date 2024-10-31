@@ -1,8 +1,19 @@
-package W2_2_T1;
+package W2_2;
 
 import java.util.ArrayList;
 
-public class GroceryListManager {
+/* HOX!
+* this is the FIRST (1) iteration of the GroceryListManager
+* that fulfills the requirements for task 1
+*
+* to avoid duplicated code, this class will be modified in the same file
+* and the different iterations are simply stored in their
+* respective commits in github. the versioned links are stored not only
+* in OMA, but also the attached iterations.md file
+*
+* thanks */
+
+public class GroceryListManager_I1 {
     private static final ArrayList<String> groceryList = new ArrayList<>();
 
     public static boolean checkItem(String item) {
