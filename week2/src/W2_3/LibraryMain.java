@@ -15,6 +15,7 @@ public class LibraryMain {
         System.out.println();
         
         library.borrowBook("Dracula");
+        System.out.printf("Dracula is %savailable%n", library.isBookAvailable("Dracula") ? "" : "not ");
 
         System.out.println();
         
@@ -30,6 +31,8 @@ public class LibraryMain {
         
         library.returnBook(new Book("Dracula", "Bram Stroker", 2102));
     
+        System.out.printf("Dracula is %savailable at the Library%n", library.isBookAvailable("Dracula") ? "" : "not ");
+        
         System.out.println();
         
         library.displayBooks();
