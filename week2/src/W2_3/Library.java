@@ -55,4 +55,19 @@ public class Library {
         }
         return false;
     }
+
+    public double getAverageBookRating() {
+        int amount = 0;
+        double totalRatings = 0;
+
+        for (Book b : this.books) {
+            amount++;
+            double bookTotalRatings = b.getRatings().stream()
+                    .mapToDouble(a -> a)
+                    .sum();
+            totalRatings += bookTotalRatings / b.getRatings().size(); 
+        }
+
+        return totalRatings / amount;
+    }
 }

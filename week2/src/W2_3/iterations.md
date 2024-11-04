@@ -6,3 +6,5 @@ iteration 2: https://github.com/santten/oo-course-2024/tree/6f447a4f9cb9f30cde01
 
 iteration 3: https://github.com/santten/oo-course-2024/tree/e8d824a567fcda540aaf95978e7a36b261bd09a1/week2/src/W2_3
 
+iteration 4: https://github.com/santten/oo-course-2024/tree/998a1d95919171920c69f1ee2a9f887d7d9a1ced/week2/src/W2_3
+
