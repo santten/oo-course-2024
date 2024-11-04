@@ -6,24 +6,43 @@ public class Library {
 
     public void displayBooks(){
         System.out.printf("%nAll Books in the Library%n");
-        for (Book b : this.books) {
-            System.out.printf("%s by %s (%s)%n", b.getTitle(), b.getAuthor(), b.getPublicationYear());
-        };
+        displayBookArray(this.books);
     }
 
+    public void displayBookArray(ArrayList<Book> b){
+        int i = 0;
+        for (Book book : b) {
+            i++;
+            System.out.printf("%s. %s by %s (%s)%n", i, book.getTitle(), book.getAuthor(), book.getPublicationYear());
+        }
+    }
+    
     public void addBook(Book book){
         this.books.add(book);
     }
 
-    public void findBooksByAuthor(String author){
+    public ArrayList<Book> findBooksByAuthor(String author){
         ArrayList<Book> booksByAuthor = new ArrayList<>();
-        System.out.printf("%nAll Books by %s%n", author);
         
         for (Book b : this.books) {
             if (b.getAuthor() == author){
                 booksByAuthor.add(b);
-                System.out.printf("%s by %s (%s)%n", b.getTitle(), b.getAuthor(), b.getPublicationYear());
-            }
+           }
         }
+
+        return booksByAuthor;
+    }
+
+    public void borrowBook(String title){
+        Book borrowing = this.books.stream().filter(item -> item.getTitle().equals(title)).findFirst().orElse(null);
+        if (borrowing != null){
+            System.out.printf("Borrowing \"%s\"%n", borrowing.getTitle());
+            this.books.remove(borrowing);
+        }
+    }
+
+    public void returnBook(Book book){
+        System.out.printf("\"%s\" has been returned to the Library", book.getTitle());
+        addBook(book);
     }
 }
