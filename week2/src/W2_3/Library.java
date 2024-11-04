@@ -1,6 +1,7 @@
 package W2_3;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
@@ -69,5 +70,11 @@ public class Library {
         }
 
         return totalRatings / amount;
+    }
+
+    public Book getMostReviewedBook() {
+        return this.books.stream()
+                .max(Comparator.comparingInt(b -> b.getReviews().size()))
+                .orElse(null);
     }
 }

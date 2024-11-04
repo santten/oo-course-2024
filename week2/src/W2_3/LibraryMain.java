@@ -47,6 +47,9 @@ public class LibraryMain {
 
         library.displayBooks();
 
+        System.out.println();
         System.out.printf("Average rating of books in the library: %s%n", library.getAverageBookRating());
+        Book mostReviewed = library.getMostReviewedBook();
+        System.out.printf("Most reviewed book: \"%s\" by %s (%s)%n", mostReviewed.getTitle(), mostReviewed.getAuthor(), mostReviewed.getPublicationYear());
     }
 }
