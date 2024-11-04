@@ -1,14 +1,20 @@
 package W2_3;
 
+import java.util.ArrayList;
+
 public class Book {
     private String title;
     private String author;
     private int publicationYear;
+    private ArrayList<Double> ratings;
+    private ArrayList<String> reviews;
 
     public Book(String title, String author, int publicationYear) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;
+        this.ratings = new ArrayList<>();
+        this.reviews = new ArrayList<>();
     }
 
     public String getTitle() {
@@ -33,5 +39,21 @@ public class Book {
 
     public void setPublicationYear(int publicationYear) {
         this.publicationYear = publicationYear;
+    }
+
+    public ArrayList<Double> getRatings() {
+        return ratings;
+    }
+
+    public void addRating(Double rating) {
+        this.ratings.add(rating);
+    }
+
+    public ArrayList<String> getReviews() {
+        return reviews;
+    }
+
+    public void addReview(String review) {
+        this.reviews.add(review);
     }
 }

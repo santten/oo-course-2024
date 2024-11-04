@@ -1,6 +1,8 @@
-### versioned links for different tasks
+### versioned links for previous tasks
 
 iteration 1: https://github.com/santten/oo-course-2024/tree/dcdf582b7af3ca32619d883934c52710751e1c6b/week2/src/W2_3
 
 iteration 2: https://github.com/santten/oo-course-2024/tree/6f447a4f9cb9f30cde01490dcc5b18c8be6092e4/week2/src/W2_3
+
+iteration 3: https://github.com/santten/oo-course-2024/tree/e8d824a567fcda540aaf95978e7a36b261bd09a1/week2/src/W2_3
 
