@@ -35,22 +35,9 @@ public class Library {
         return booksByAuthor;
     }
 
-    public void borrowBook(String title) {
-        Book borrowing = this.books.stream().filter(item -> item.getTitle().equals(title)).findFirst().orElse(null);
-        if (borrowing != null) {
-            System.out.printf("Borrowing \"%s\"%n", borrowing.getTitle());
-            this.books.remove(borrowing);
-        }
-    }
-
-    public void returnBook(Book book) {
-        System.out.printf("\"%s\" has been returned to the Library%n", book.getTitle());
-        addBook(book);
-    }
-
     public boolean isBookAvailable(String title) {
         for (Book b : this.books) {
-            if (b.getTitle() == title) {
+            if (b.getTitle() == title && b.getAvailability()) {
                 return true;
             }
         }

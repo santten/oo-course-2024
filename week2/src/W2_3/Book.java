@@ -8,6 +8,7 @@ public class Book {
     private int publicationYear;
     private ArrayList<Double> ratings;
     private ArrayList<String> reviews;
+    private boolean availability;
 
     public Book(String title, String author, int publicationYear) {
         this.title = title;
@@ -15,6 +16,19 @@ public class Book {
         this.publicationYear = publicationYear;
         this.ratings = new ArrayList<>();
         this.reviews = new ArrayList<>();
+        this.availability = true;
+    }
+
+    public void borrowBook() {
+        this.availability = false;
+    }
+
+    public void returnBook() {
+        this.availability = true;
+    }
+
+    public boolean getAvailability() {
+        return this.availability;
     }
 
     public String getTitle() {
