@@ -13,7 +13,7 @@ public class Car extends AbstractVehicle {
     @Override
     public void getInfo() {
         System.out.printf("Car Information%n");
-        System.out.printf("Type: %s || Color: %s%n", type, color);
+        System.out.printf("Type: %s || Fuel: %s || Color: %s%n", type, getFuelType(), color);
     }
 
     @Override

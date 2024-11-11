@@ -1,16 +1,18 @@
 package W3_2_T2;
 
-import W3_2_T1.Vehicle;
-
-public class Bus implements Vehicle {
-    private final String fuel;
+public class Bus extends AbstractVehicle {
     private final int capacity;
     private final String type;
 
     public Bus(String fuel, int capacity){
+        super(fuel);
         this.type = "Bus";
-        this.fuel = fuel;
         this.capacity = capacity;
+    }
+
+    @Override
+    public String getVehicleType() {
+        return type;
     }
 
     @Override
@@ -26,6 +28,6 @@ public class Bus implements Vehicle {
     @Override
     public void getInfo() {
         System.out.printf("Bus Information%n");
-        System.out.printf("Type: %s || Fuel: %s || Capacity: %s passengers%n", type, fuel, capacity);
+        System.out.printf("Type: %s || Fuel: %s || Capacity: %s passengers%n", type, getFuelType(), capacity);
     }
 }
