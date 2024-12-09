@@ -1,4 +1,4 @@
-package task1;
+package task1_1;
 
 public class Pen {
     private Color color;

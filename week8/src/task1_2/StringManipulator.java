@@ -1,4 +1,4 @@
-package task2;
+package task1_2;
 
 public class StringManipulator {
     public String concatenate(String str1, String str2) {

@@ -1,4 +1,4 @@
-package task2;
+package task1_2;
 
 import org.junit.jupiter.api.Test;
 
